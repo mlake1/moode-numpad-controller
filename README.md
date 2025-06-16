@@ -155,7 +155,7 @@ moode-numpad-controller/
 | Tab | Clear Queue |
 | / (Slash) | Show Status |
 | * (Asterisk) | Local Music |
-| Backspace | not working yet ~~Safe Shutdown~~ |
+| Backspace | Safe Shutdown |
 | Calculator | Clear Queue |
 
 ## 🛠️ Manual Installation
