@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moode Audio Controller Reference - Kensington</title>
+    <style>
+        @page {
+            size: A5;
+            margin: 15mm;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .container {
+            background: white;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #000;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            margin: 0;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            color: #333;
+            margin: 5px 0;
+        }
+        
+        .device-info {
+            background: #f8f8f8;
+            padding: 12px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #000;
+        }
+        
+        .keypad-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .tall-keys-group {
+            grid-column: 4;
+            grid-row: 3 / 7;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .keypad-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, auto);
+            gap: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .plus-key {
+            flex: 1;
+            background: #000;
+            color: white;
+            padding: 8px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            font-size: 13px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .return-key {
+            flex: 1;
+            background: #000;
+            color: white;
+            padding: 8px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            font-size: 13px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .key-item {
+            background: #000;
+            color: white;
+            padding: 8px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            font-size: 13px;
+            text-align: center;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .number-key {
+            background: #f8f8f8;
+            color: #000;
+        }
+        
+        .key-symbol {
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .number-key .key-symbol {
+            color: #000;
+        }
+        
+        .key-wide {
+            grid-column: span 2;
+        }
+        
+        @media print {
+            body {
+                background: none;
+            }
+            .container {
+                border: 2px solid #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiMwMDAiLz4KPHRleHQgeD0iNiIgeT0iMjMiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSJib2xkIj5tb2RlPC90ZXh0Pgo8Y2lyY2xlIGN4PSIxOC41IiBjeT0iMjAiIHI9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmY2NjAwIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSI2IiB5PSIzMiIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3Ij5hdWRpbyBwbGF5ZXI8L3RleHQ+Cjwvc3ZnPgo=" style="width: 32px; height: 32px; margin-right: 10px; vertical-align: middle;"> moode Audio Controller</h1>
+            <p class="subtitle">Kensington keypad reference</p>
+        </div>
+        
+        <div class="device-info">
+            <strong>Device IP:</strong> 192.168.178.46
+        </div>
+        
+        <div class="section">
+            <div class="keypad-layout">
+                <!-- Row 1: num, 🖩, tab, ← -->
+                <div class="key-item">
+                    <span class="key-symbol">num</span>
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol" style="font-size: 32px;">🖩</span>
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol">tab</span>
+                    Clear
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol" style="font-size: 20px;">←</span>
+                    ⚠️ Shutdown
+                </div>
+                
+                <!-- Row 2: =, /, *, - -->
+                <div class="key-item">
+                    <span class="key-symbol">=</span>
+                    Mute
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol">/</span>
+                    Show Status
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol">*</span>
+                    Local Music
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol">-</span>
+                    Volume Down
+                </div>
+                
+                <!-- Row 3: 7, 8, 9 -->
+                <div class="key-item number-key">
+                    <span class="key-symbol">7</span>
+                    FIP
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">8</span>
+                    Couleur3
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">9</span>
+                    France Bleu Loire
+                </div>
+                
+                <!-- Tall keys grouped with no gap -->
+                <div class="tall-keys-group">
+                    <div class="plus-key">
+                        <span class="key-symbol">+</span>
+                        Volume Up
+                    </div>
+                    <div class="return-key">
+                        <span class="key-symbol">return</span>
+                        Play/Pause
+                    </div>
+                </div>
+                
+                <!-- Row 4: 4, 5, 6 -->
+                <div class="key-item number-key">
+                    <span class="key-symbol">4</span>
+                    BBC Radio 4
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">5</span>
+                    Resonance FM
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">6</span>
+                    BBC Radio 6 Music
+                </div>
+                
+                <!-- Row 5: 1, 2, 3 -->
+                <div class="key-item number-key">
+                    <span class="key-symbol">1</span>
+                    BBC Radio 1
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">2</span>
+                    BBC Radio 2
+                </div>
+                <div class="key-item number-key">
+                    <span class="key-symbol">3</span>
+                    BBC Radio 3
+                </div>
+                
+                <!-- Row 6: 0 (wide), . -->
+                <div class="key-item number-key key-wide">
+                    <span class="key-symbol">0</span>
+                    Radio Jazz Swiss
+                </div>
+                <div class="key-item">
+                    <span class="key-symbol">.</span>
+                    Stop
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
