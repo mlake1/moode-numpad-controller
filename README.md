@@ -62,13 +62,13 @@ Physical Key Press → triggerhappy → Bash Wrapper → Python Controller → m
  - Most mechanical keyboard brand numpads
  - Requirement: Must use standard USB HID implementation, if they follow the standards they should work perfectly, however it's generally not      possible to tell which controller they use prior to purchase
 
-** To test follow these steps:
+**To Test Follow These Steps:**
 ** 1. Check USB detection
-lsusb | grep -i keyboard
+ - lsusb | grep -i keyboard
 **2. Test key detection  
-sudo evtest
+ - sudo evtest
 ** 3. Look for standard KEY_KP codes
-Should see: KEY_KP0, KEY_KP1, etc. (not custom codes)
+ - Should see: KEY_KP0, KEY_KP1, etc. (not custom codes)
 
 **#Community Contributions: Please report your hardware compatibility results!**
 
@@ -346,24 +346,24 @@ This project has been tested with:
 - **Volume API**: Some volume commands may need refinement for optimal response
 
 ### Planned Improvements
-- [ ] Fix safe shutdown functionality with proper privilege escalation
+- [X] F̶i̶x̶ ̶s̶a̶f̶e̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶ ̶w̶i̶t̶h̶ ̶p̶r̶o̶p̶e̶r̶ ̶p̶r̶i̶v̶i̶l̶e̶g̶e̶ ̶e̶s̶c̶a̶l̶a̶t̶i̶o̶n- SOLVED
 - [ ] Add configuration file for easier station management
 - [ ] Implement station cycling feature
 - [ ] Add display output for current status
 - [ ] Create web interface for key mapping configuration
 - [ ] Add support for playlist management
 
-### Safe Shutdown Development Notes
-The shutdown function faces challenges due to:
-- triggerhappy running in restricted context
-- systemd authentication requirements
-- setuid script limitations with modern Linux security
+ ̶#̶#̶#̶ ̶S̶a̶f̶e̶ ̶S̶h̶u̶t̶d̶o̶w̶n̶ ̶D̶e̶v̶e̶l̶o̶p̶m̶e̶n̶t̶ ̶N̶o̶t̶e̶s̶  SOLVED
+-̶T̶h̶e̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶f̶a̶c̶e̶s̶ ̶c̶h̶a̶l̶l̶e̶n̶g̶e̶s̶ ̶d̶u̶e̶ ̶t̶o̶:̶
+̶-̶ ̶t̶r̶i̶g̶g̶e̶r̶h̶a̶p̶p̶y̶ ̶r̶u̶n̶n̶i̶n̶g̶ ̶i̶n̶ ̶r̶e̶s̶t̶r̶i̶c̶t̶e̶d̶ ̶c̶o̶n̶t̶e̶x̶t̶
+̶-̶ ̶s̶y̶s̶t̶e̶m̶d̶ ̶a̶u̶t̶h̶e̶n̶t̶i̶c̶a̶t̶i̶o̶n̶ ̶r̶e̶q̶u̶i̶r̶e̶m̶e̶n̶t̶s̶
+̶-̶ ̶s̶e̶t̶u̶i̶d̶ ̶s̶c̶r̶i̶p̶t̶ ̶l̶i̶m̶i̶t̶a̶t̶i̶o̶n̶s̶ ̶w̶i̶t̶h̶ ̶m̶o̶d̶e̶r̶n̶ ̶L̶i̶n̶u̶x̶ ̶s̶e̶c̶u̶r̶i̶t̶y̶
 
-**Potential solutions being investigated:**
-1. Custom systemd service for shutdown
-2. GPIO-based hardware shutdown circuit
-3. Alternative privilege escalation methods
-4. Integration with moOde's existing shutdown mechanisms
+ ̶*̶*̶P̶o̶t̶e̶n̶t̶i̶a̶l̶ ̶s̶o̶l̶u̶t̶i̶o̶n̶s̶ ̶b̶e̶i̶n̶g̶ ̶i̶n̶v̶e̶s̶t̶i̶g̶a̶t̶e̶d̶:̶*̶*̶
+̶1̶.̶ ̶C̶u̶s̶t̶o̶m̶ ̶s̶y̶s̶t̶e̶m̶d̶ ̶s̶e̶r̶v̶i̶c̶e̶ ̶f̶o̶r̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶
+̶2̶.̶ ̶G̶P̶I̶O̶-̶b̶a̶s̶e̶d̶ ̶h̶a̶r̶d̶w̶a̶r̶e̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶c̶i̶r̶c̶u̶i̶t̶
+̶3̶.̶ ̶A̶l̶t̶e̶r̶n̶a̶t̶i̶v̶e̶ ̶p̶r̶i̶v̶i̶l̶e̶g̶e̶ ̶e̶s̶c̶a̶l̶a̶t̶i̶o̶n̶ ̶m̶e̶t̶h̶o̶d̶s̶
+̶4̶.̶ ̶I̶n̶t̶e̶g̶r̶a̶t̶i̶o̶n̶ ̶w̶i̶t̶h̶ ̶m̶o̶O̶d̶e̶'̶s̶ ̶e̶x̶i̶s̶t̶i̶n̶g̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶m̶e̶c̶h̶a̶n̶i̶s̶m̶s̶
 
 ## 🤝 Contributing
 
