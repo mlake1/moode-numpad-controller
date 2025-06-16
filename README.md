@@ -63,12 +63,11 @@ Physical Key Press → triggerhappy → Bash Wrapper → Python Controller → m
  - Requirement: Must use standard USB HID implementation, if they follow the standards they should work perfectly, however it's generally not      possible to tell which controller they use prior to purchase
 
 **To Test Follow These Steps:**
-
-**1. Check USB detection
+ - 1. Check USB detection
  - lsusb | grep -i keyboard
-**2. Test key detection  
+ - 2. Test key detection  
  - sudo evtest
-** 3. Look for standard KEY_KP codes
+ - 3. Look for standard KEY_KP codes
  - Should see: KEY_KP0, KEY_KP1, etc. (not custom codes)
 
 **#Community Contributions: Please report your hardware compatibility results!**
