@@ -180,20 +180,17 @@ sudo cp src/numpad-moode.conf /etc/triggerhappy/triggers.d/
 sudo systemctl restart triggerhappy
 ```
 
-### 4. ~~Setup Safe Shutdown (Optional - Currently Not Working)~~
-**Note**: Safe shutdown functionality is currently not working reliably. This section is included for future development.
+### 4. Safe Shutdown
+Safe shutdown functionality 
+For this to work triggerhappy needs to run as moode default is running as nobody user which lacks sudo privileges
 
-```bash
-sudo nano /usr/local/bin/moode-shutdown
-```
-```bash
-#!/bin/bash
-/sbin/shutdown -h now
-```
-```bash
-sudo chown root:root /usr/local/bin/moode-shutdown
-sudo chmod 4755 /usr/local/bin/moode-shutdown
-```
+ /lib/systemd/system/triggerhappy.service
+ change User=nobody to User=moode
+
+ commands to run:
+sudo nano /lib/systemd/system/triggerhappy.service
+sudo systemctl daemon-reload
+sudo systemctl restart triggerhappy
 
 ## 🔍 Setup Verification
 
