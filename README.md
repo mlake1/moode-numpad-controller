@@ -64,13 +64,13 @@ Physical Key Press → triggerhappy → Bash Wrapper → Python Controller → m
 
 **To Test Follow These Steps:**
  - 1. Check USB detection
- '''bash
+```bash
 lsusb | grep -i keyboard
-'''
+```
 - 2. Test key detection  
-'''bash
+```bash
 sudo evtest
-'''
+```
  - 3. Look for standard KEY_KP codes
  - Should see: KEY_KP0, KEY_KP1, etc. (not custom codes)
 
