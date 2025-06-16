@@ -83,12 +83,12 @@ def next_track():
 
 def volume_up():
     """Increase volume"""
-        result = execute_command(set_volume -up 5')
+    result = execute_command('set_volume -up 5')
         print("Volume increased")
 
 
 def volume_down():
-    result = execute_command(set_volume -dn 5')
+    result = execute_command('set_volume -dn 5')
         print("Volume decreased")
 
 def previous_track():
@@ -104,7 +104,7 @@ def shutdown():
         subprocess.call(['/var/local/www/commandw/restart.sh', 'poweroff'])
         print("Shutdown command sent")
     except Exception as e:
-        print(f"Shutdown failed: {e}"
+        print(f"Shutdown failed: {e}")
 
 def show_status():
     """Show current status"""
@@ -138,7 +138,7 @@ def repeat_toggle():
     print("Repeat mode toggled")
 
 def mute():
-    """Toggle mute""
+    """Toggle mute"""
     result = execute_command('set_volume -mute')                       
     print("Mute toggled")
 
