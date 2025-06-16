@@ -101,12 +101,10 @@ def shutdown():
     """Shutdown the system safely"""
     print("Initiating shutdown...")
     try:
-        # Note: This function is not currently working reliably
-        # Due to permission/authentication issues with triggerhappy context
-        result = execute_command('shutdown')
-        print("Shutdown initiated via moOde API")
+        subprocess.call(['/var/local/www/commandw/restart.sh', 'poweroff'])
+        print("Shutdown command sent")
     except Exception as e:
-        print(f"Shutdown failed: {e}")
+        print(f"Shutdown failed: {e}"
 
 def show_status():
     """Show current status"""
