@@ -346,8 +346,8 @@ This project has been tested with:
 ## 🚧 Known Issues & Future Work
 
 ### Current Limitations
-- **Safe Shutdown**: The Backspace key shutdown function is not working reliably due to permission/authentication issues with triggerhappy context
-- **Volume API**: Some volume commands may need refinement for optimal response
+ ̶-̶ ̶*̶*̶S̶a̶f̶e̶ ̶S̶h̶u̶t̶d̶o̶w̶n̶*̶*̶:̶ ̶T̶h̶e̶ ̶B̶a̶c̶k̶s̶p̶a̶c̶e̶ ̶k̶e̶y̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶ ̶i̶s̶ ̶n̶o̶t̶ ̶w̶o̶r̶k̶i̶n̶g̶ ̶r̶e̶l̶i̶a̶b̶l̶y̶ ̶d̶u̶e̶ ̶t̶o̶ ̶p̶e̶r̶m̶i̶s̶s̶i̶o̶n̶/ SOLVED
+ - **Volume API**: Some volume commands may need refinement for optimal response
 
 ### Planned Improvements
 - [X] F̶i̶x̶ ̶s̶a̶f̶e̶ ̶s̶h̶u̶t̶d̶o̶w̶n̶ ̶f̶u̶n̶c̶t̶i̶o̶n̶a̶l̶i̶t̶y̶ ̶w̶i̶t̶h̶ ̶p̶r̶o̶p̶e̶r̶ ̶p̶r̶i̶v̶i̶l̶e̶g̶e̶ ̶e̶s̶c̶a̶l̶a̶t̶i̶o̶n- SOLVED
