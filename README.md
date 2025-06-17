@@ -72,7 +72,11 @@ lsusb | grep -i keyboard
 sudo evtest
 ```
  3. Look for standard KEY_KP codes
- - Should see: KEY_KP0, KEY_KP1, etc. (not custom codes)
+ - Should see:
+```bash
+KEY_KP0, KEY_KP1,
+```
+etc. (not custom codes)
 
 **#Community Contributions: Please report your hardware compatibility results!**
 
